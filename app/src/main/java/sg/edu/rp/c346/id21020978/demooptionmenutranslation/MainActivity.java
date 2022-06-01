@@ -45,39 +45,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         if(wordClicked.equalsIgnoreCase("hello")){
-            if(item.getItemId()==0) { //check whether the selected menu item ID is 0
-                //code for action
+            if(item.getItemId()==0) {
                 Toast.makeText(MainActivity.this, "English is chosen", Toast.LENGTH_SHORT).show();
                 tvTranslatedText.setText("Hello");
-                return true; //menu item successfully handled
+                return true;
 
-            } else if(item.getItemId()==1) { //check if the selected menu item ID is 1
-                //code for action
+            } else if(item.getItemId()==1) {
                 Toast.makeText(MainActivity.this, "Italian is chosen", Toast.LENGTH_SHORT).show();
                 tvTranslatedText.setText("Ciao");
-                return true;  //menu item successfully handled
+                return true;  /
             }
         }
         if(wordClicked.equalsIgnoreCase("bye")){
-            if(item.getItemId()==0) { //check whether the selected menu item ID is 0
+            if(item.getItemId()==0) {
                 //code for action
                 Toast.makeText(MainActivity.this, "English is chosen", Toast.LENGTH_SHORT).show();
                 tvTranslatedText2.setText("Bye");
-                return true; //menu item successfully handled
+                return true;
 
-            } else if(item.getItemId()==1) { //check if the selected menu item ID is 1
-                //code for action
+            } else if(item.getItemId()==1) {
                 Toast.makeText(MainActivity.this, "Italian is chosen", Toast.LENGTH_SHORT).show();
                 tvTranslatedText2.setText("Addio");
-                return true;  //menu item successfully handled
+                return true;
             }
         }
-        return super.onContextItemSelected(item); //pass menu item to the superclass implementation
+        return super.onContextItemSelected(item);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
